@@ -1,8 +1,12 @@
 {
   "name": "ngx-tiny-slider",
   "version": "0.0.1",
+  "dependencies": {
+    "tiny-slider": "^2.9.1"
+  },
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0"
-  }
+  },
+  "author": "Volodymyr Danyliv"
 }

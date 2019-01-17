@@ -1,19 +1,32 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 
 import {NgxTinySliderService} from './ngx-tiny-slider.service';
 
 @Component({
-  selector: 'lib-ngx-tiny-slider',
-  templateUrl: 'ngx-tiny-slider.component.ts',
-  styleUrls: ['ngx-tiny-slider.component.scss']
+  selector: 'ngx-tiny-slider',
+  templateUrl: 'ngx-tiny-slider.component.html',
+  styleUrls: ['ngx-tiny-slider.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NgxTinySliderComponent implements OnInit {
-  @ViewChild('ref') containerRef;
+  @Input() config;
+  @ViewChild('slideItems') slideItemsContainerRef;
+
+  defaultConfig = this.ngxTinySliderService.getDefaultConfig();
 
   constructor(private ngxTinySliderService: NgxTinySliderService) {
   }
 
   ngOnInit() {
-    this.ngxTinySliderService.initSlider(this.containerRef);
+    this.extendConfig();
+    this.initSlider();
+  }
+
+  private extendConfig() {
+    Object.keys(this.config).forEach(i => this.defaultConfig[i] = this.config[i]);
+  }
+
+  private initSlider() {
+    this.ngxTinySliderService.initSlider(this.defaultConfig, this.slideItemsContainerRef);
   }
 }

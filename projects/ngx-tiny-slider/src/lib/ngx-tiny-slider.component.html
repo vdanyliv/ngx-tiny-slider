@@ -1,0 +1,5 @@
+<div class="slider-wrapper" [ngClass]="{'slider-wrapper-nav-center': config?.centerNavigation, 'slider-wrapper-custom-nav-style': config?.customControlsStyle}">
+  <div class="slide-items" #slideItems>
+    <ng-content select=".items"></ng-content>
+  </div>
+</div>
