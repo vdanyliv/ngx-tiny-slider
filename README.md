@@ -8,7 +8,7 @@ Angular component that gives you possibility to use [tiny-slider](https://www.np
 
 # Usage example
 Your component template
-```javascript
+```html
 <ngx-tiny-slider [config]="tinySliderConfig">
     <ng-container class="items">
       <div class="item">
