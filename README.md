@@ -44,7 +44,7 @@ Your component template
   </ngx-tiny-slider>
   ```
   
-  # Your component defenition
+Your component defenition
   
   ```javascript
 @Component({
