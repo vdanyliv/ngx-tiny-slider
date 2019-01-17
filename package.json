@@ -1,10 +1,11 @@
 {
   "name": "ngx-tiny-slider-wrapper",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:slider": "ng build ngx-tiny-slider && cp README.md ./projects/ngx-tiny-slider/dist/ngx-tiny-slider",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
