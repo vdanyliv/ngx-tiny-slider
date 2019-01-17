@@ -1,1 +1,40 @@
 @import "~tiny-slider/dist/tiny-slider.css";
+
+.slider-wrapper {
+  &-nav-center {
+    position: relative;
+    padding: 0 28px;
+
+    .tns-controls {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 50%;
+
+      [data-controls*='next'] {
+        right: 0;
+        position: absolute;
+      }
+
+      [data-controls*='prev'] {
+        left: 0;
+        position: absolute;
+      }
+    }
+  }
+
+  &-custom-nav-style {
+    .tns-controls {
+      button {
+        width: 25px;
+        height: 25px;
+        color: #fff;
+        background: #808080;
+        border-radius: 12px;
+        padding: 0;
+        font-size: 18px;
+        outline: none;
+      }
+    }
+  }
+}
