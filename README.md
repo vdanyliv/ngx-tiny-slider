@@ -1,5 +1,7 @@
 # ngx-tiny-slider
 Angular component that gives you possibility to use [tiny-slider](https://www.npmjs.com/package/tiny-slider) library. 
+1. Demo [page](http://ganlanyuan.github.io/tiny-slider/demo/)
+2. tiny-slider official [repo](https://github.com/ganlanyuan/tiny-slider#readme)
 
 # How to use
 
