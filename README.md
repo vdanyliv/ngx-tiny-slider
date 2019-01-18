@@ -1,7 +1,6 @@
 # ngx-tiny-slider
 Angular component that gives you possibility to use [tiny-slider](https://www.npmjs.com/package/tiny-slider) library. 
 1. Demo [page](http://ganlanyuan.github.io/tiny-slider/demo/)
-2. tiny-slider official [repo](https://github.com/ganlanyuan/tiny-slider#readme)
 
 # How to use
 
@@ -70,3 +69,9 @@ export class AppComponent implements OnInit {
 }
 
   ```
+  
+  # Additional options
+  1. waiteForDom {Boolean} - in case of using dynamic content use this property, trigger domReady subject when your content ready
+  2. domReady {Subject} - provide possibility to initialize component manually
+  3. customControlsStyle {Boolean} - Custom component style
+  4. centerNavigation {Boolean} - Navigation on center of the slider container

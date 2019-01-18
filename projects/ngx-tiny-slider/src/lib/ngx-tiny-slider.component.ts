@@ -1,6 +1,10 @@
 import {Component, Input, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 
+import {Subject} from 'rxjs';
+import {first} from 'rxjs/operators';
+
 import {NgxTinySliderService} from './ngx-tiny-slider.service';
+import {NgxTinySliderSettingsInterface} from './interfaces/ngx-tiny-slider-settings.interface';
 
 @Component({
   selector: 'ngx-tiny-slider',
@@ -9,17 +13,31 @@ import {NgxTinySliderService} from './ngx-tiny-slider.service';
   encapsulation: ViewEncapsulation.None
 })
 export class NgxTinySliderComponent implements OnInit {
-  @Input() config;
+  @Input() config: NgxTinySliderSettingsInterface;
   @ViewChild('slideItems') slideItemsContainerRef;
 
-  defaultConfig = this.ngxTinySliderService.getDefaultConfig();
+  public domReady = new Subject();
+  private defaultConfig = this.ngxTinySliderService.getDefaultConfig();
 
   constructor(private ngxTinySliderService: NgxTinySliderService) {
   }
 
   ngOnInit() {
     this.extendConfig();
-    this.initSlider();
+
+    if (this.config.waiteForDom) {
+      this.listenForDomReady();
+    } else {
+      this.initSlider();
+    }
+  }
+
+  private listenForDomReady() {
+    this.domReady
+      .pipe(first())
+      .subscribe(() => {
+        this.initSlider();
+      });
   }
 
   private extendConfig() {

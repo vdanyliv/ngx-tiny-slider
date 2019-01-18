@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {NgxTinySliderSettingsInterface} from '../../projects/ngx-tiny-slider/src/lib/interfaces/ngx-tiny-slider-settings.interface';
+import {NgxTinySliderSettingsInterface} from '../../projects/ngx-tiny-slider/dist/ngx-tiny-slider';
+import {NgxTinySliderSettingsInterface} from 'ngx-tiny-slider';
 
 @Component({
   selector: 'app-root',
@@ -14,9 +15,10 @@ export class AppComponent implements OnInit {
       arrowKeys: true,
       autoWidth: true,
       gutter: 10,
+      nav: false,
       centerNavigation: true,
       customControlsStyle: true,
-      controlsText: ['<', '>'],
+      controlsText: ['<', '>']
     };
   }
 }

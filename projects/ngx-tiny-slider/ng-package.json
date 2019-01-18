@@ -3,8 +3,5 @@
   "dest": "./dist/ngx-tiny-slider",
   "whitelistedNonPeerDependencies": [
     "tiny-slider"
-  ],
-  "lib": {
-    "entryFile": "src/public_api.ts"
-  }
+  ]
 }
