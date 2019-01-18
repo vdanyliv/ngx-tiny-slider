@@ -1,5 +1,9 @@
-@import "~tiny-slider/dist/tiny-slider.css";
+@import "assets/ngx-tiny-slider";
+// Variables
+$border-color-hover: #bfbfbf;
+$border-color-active: #808080;
 
+// Slider wrapper
 .slider-wrapper {
   &-nav-center {
     position: relative;
@@ -28,12 +32,18 @@
       button {
         width: 25px;
         height: 25px;
-        color: #fff;
-        background: #808080;
+        color: $border-color-active;
         border-radius: 12px;
+        border: 1px solid $border-color-active;
         padding: 0;
-        font-size: 18px;
+        font-size: 17px;
         outline: none;
+
+        &:hover {
+          background: $border-color-hover;
+          color: #fff;
+          border: 1px solid $border-color-hover;
+        }
       }
     }
   }

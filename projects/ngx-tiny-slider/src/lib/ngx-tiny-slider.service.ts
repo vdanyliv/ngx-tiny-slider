@@ -16,7 +16,6 @@ export class NgxTinySliderService {
   getDefaultConfig() {
     return {
       items: 3,
-      nav: false,
       mode: 'carousel',
       controlsPosition: 'bottom',
       speed: 400,
