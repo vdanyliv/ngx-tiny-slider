@@ -25,7 +25,7 @@
     "rxjs": "~6.3.3",
     "tiny-slider": "^2.9.1",
     "zone.js": "~0.8.26",
-    "ngx-tiny-slider": "file:projects/ngx-tiny-slider/dist/ngx-tiny-slider"
+    "ngx-tiny-slider": "0.0.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",

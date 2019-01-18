@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {NgxTinySliderSettingsInterface} from '../../projects/ngx-tiny-slider/dist/ngx-tiny-slider';
 import {NgxTinySliderSettingsInterface} from 'ngx-tiny-slider';
 
 @Component({
