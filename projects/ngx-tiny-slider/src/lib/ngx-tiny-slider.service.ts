@@ -10,7 +10,8 @@ export class NgxTinySliderService {
   }
 
   initSlider(config, elementRef: ElementRef) {
-    return tns(Object.assign({container: elementRef.nativeElement}, config));
+    const extendConfig = Object.assign({container: elementRef.nativeElement}, config);
+    return tns(extendConfig);
   }
 
   getDefaultConfig() {
@@ -18,7 +19,7 @@ export class NgxTinySliderService {
       items: 3,
       mode: 'carousel',
       controlsPosition: 'bottom',
-      speed: 400,
+      speed: 400
     };
   }
 }
