@@ -1,11 +1,13 @@
 # ngx-tiny-slider
-Angular component that gives you possibility to use [tiny-slider](https://www.npmjs.com/package/tiny-slider) library. 
+Angular component that gives you possibility to use tiny slider library. 
 1. Demo [page](http://ganlanyuan.github.io/tiny-slider/demo/)
 
 # How to use
-
 1. Import NgxTinySliderModule into your module
 2. Use in your component template <ngx-tiny-slider>
+
+#Whats new on 0.0.4?
+1. Added component OnDestroy hook, that will handle slider instance destroying  
 
 # Usage example
 Your component template
@@ -61,9 +63,7 @@ export class AppComponent implements OnInit {
       arrowKeys: true,
       autoWidth: true,
       gutter: 10,
-      centerNavigation: true,
-      customControlsStyle: true,
-      controlsText: ['<', '>'],
+      controlsText: ['<', '>']
     };
   }
 }
@@ -71,7 +71,8 @@ export class AppComponent implements OnInit {
   ```
   
   # Additional options
-  1. waiteForDom {Boolean} - in case of using dynamic content use this property, trigger domReady subject when your content ready
-  2. domReady {Subject} - provide possibility to initialize component manually
-  3. customControlsStyle {Boolean} - Custom component style
-  4. centerNavigation {Boolean} - Navigation on center of the slider container
+  1. domReady {Subject} - provide possibility to initialize component manually
+  
+  # Deprecated and removed (use tiny-slider options in case if you need extra  customisation)
+  1. customControlsStyle {Boolean} - Custom component style
+  2. centerNavigation {Boolean} - Navigation on center of the slider container

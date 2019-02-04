@@ -1,7 +1,7 @@
-import {Component, Input, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit, ViewChild, ViewEncapsulation} from '@angular/core';
 
 import {Subject} from 'rxjs';
-import {first} from 'rxjs/operators';
+import {first, takeWhile} from 'rxjs/operators';
 
 import {NgxTinySliderService} from './ngx-tiny-slider.service';
 import {NgxTinySliderSettingsInterface} from './interfaces/ngx-tiny-slider-settings.interface';
@@ -12,9 +12,12 @@ import {NgxTinySliderSettingsInterface} from './interfaces/ngx-tiny-slider-setti
   styleUrls: ['ngx-tiny-slider.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class NgxTinySliderComponent implements OnInit {
+export class NgxTinySliderComponent implements OnInit, OnDestroy {
   @Input() config: NgxTinySliderSettingsInterface;
   @ViewChild('slideItems') slideItemsContainerRef;
+
+  private sliderInstance;
+  private aliveObservable = true;
 
   public domReady = new Subject();
   private defaultConfig = this.ngxTinySliderService.getDefaultConfig();
@@ -23,7 +26,9 @@ export class NgxTinySliderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.extendConfig();
+    if (this.config) {
+      this.extendConfig();
+    }
 
     if (this.config.waiteForDom) {
       this.listenForDomReady();
@@ -32,12 +37,23 @@ export class NgxTinySliderComponent implements OnInit {
     }
   }
 
+  ngOnDestroy() {
+    if (this.config.waiteForDom) {
+      this.aliveObservable = false;
+    }
+
+    if (this.sliderInstance && this.sliderInstance.destroy) {
+      this.sliderInstance.destroy();
+    }
+  }
+
   private listenForDomReady() {
     this.domReady
-      .pipe(first())
-      .subscribe(() => {
-        this.initSlider();
-      });
+      .pipe(
+        first(),
+        takeWhile(() => this.aliveObservable)
+      )
+      .subscribe(() => this.initSlider());
   }
 
   private extendConfig() {
@@ -45,6 +61,6 @@ export class NgxTinySliderComponent implements OnInit {
   }
 
   private initSlider() {
-    this.ngxTinySliderService.initSlider(this.defaultConfig, this.slideItemsContainerRef);
+    this.sliderInstance = this.ngxTinySliderService.initSlider(this.defaultConfig, this.slideItemsContainerRef);
   }
 }
