@@ -73,6 +73,6 @@ export class AppComponent implements OnInit {
   # Additional options
   1. domReady {Subject} - provide possibility to initialize component manually
   
-  # Deprecated and removed (use tiny-slider options in case if you need extra  customisation)
+  #### Deprecated and removed (use tiny-slider options in case if you need extra  customisation)
   1. customControlsStyle {Boolean} - Custom component style
   2. centerNavigation {Boolean} - Navigation on center of the slider container
