@@ -19,7 +19,7 @@ export class NgxTinySliderService {
       items: 3,
       mode: 'carousel',
       controlsPosition: 'bottom',
-      speed: 400,
+      speed: 400
     };
   }
 }
