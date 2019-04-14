@@ -11,7 +11,60 @@ Angular component that gives you possibility to use tiny slider library.
 1. Added component OnDestroy hook, that will handle slider instance destroying  
 
 # Usage example
-Your component template
+Your module defenition example
+```javascript
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+
+import {AppComponent} from './app.component';
+import {NgxTinySliderModule} from 'ngx-tiny-slider';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    NgxTinySliderModule
+  ],
+  declarations: [
+    AppComponent
+  ],
+  exports: [
+    NgxTinySliderModule
+  ],
+  providers: [],
+  bootstrap: [
+    AppComponent
+  ]
+})
+export class AppModule {
+}
+```
+
+Your component defenition example
+  ```javascript
+import {Component, OnInit} from '@angular/core';
+import {NgxTinySliderSettingsInterface} from 'ngx-tiny-slider';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+  tinySliderConfig: NgxTinySliderSettingsInterface;
+
+  ngOnInit() {
+    this.tinySliderConfig = {
+      arrowKeys: true,
+      autoWidth: true,
+      gutter: 10,
+      controlsText: ['<', '>']
+    };
+  }
+}
+
+  ```
+
+Your component template example
 ```html
 <ngx-tiny-slider [config]="tinySliderConfig">
     <ng-container class="items">
@@ -46,29 +99,6 @@ Your component template
       </div>
     </ng-container>
   </ngx-tiny-slider>
-  ```
-  
-Your component defenition
-  
-  ```javascript
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-export class AppComponent implements OnInit {
-  tinySliderConfig: NgxTinySliderSettingsInterface;
-
-  ngOnInit() {
-    this.tinySliderConfig = {
-      arrowKeys: true,
-      autoWidth: true,
-      gutter: 10,
-      controlsText: ['<', '>']
-    };
-  }
-}
-
   ```
   
   # Additional options
