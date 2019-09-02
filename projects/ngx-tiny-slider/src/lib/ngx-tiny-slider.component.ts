@@ -16,7 +16,7 @@ export class NgxTinySliderComponent implements OnInit, OnDestroy {
   @Input() config: NgxTinySliderSettingsInterface;
   @ViewChild('slideItems') slideItemsContainerRef;
 
-  private sliderInstance;
+  public sliderInstance;
   private aliveObservable = true;
 
   public domReady = new Subject();
