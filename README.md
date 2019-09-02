@@ -11,7 +11,7 @@ Angular component that gives you possibility to use tiny slider library.
 1. Added component OnDestroy hook, that will handle slider instance destroying  
 
 # Usage example
-Your module defenition example
+Your module definition example
 ```javascript
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
@@ -39,7 +39,7 @@ export class AppModule {
 }
 ```
 
-Your component defenition example
+Your component definition example
   ```javascript
 import {Component, OnInit} from '@angular/core';
 import {NgxTinySliderSettingsInterface} from 'ngx-tiny-slider';
