@@ -1,11 +1,12 @@
 {
   "name": "ngx-tiny-slider-wrapper",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "build:slider": "ng build ngx-tiny-slider && cp README.md ./projects/ngx-tiny-slider/dist/ngx-tiny-slider",
+    "publish:slider": "npm publish projects/ngx-tiny-slider/dist/ngx-tiny-slider",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -23,9 +24,8 @@
     "@angular/router": "~7.0.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
-    "tiny-slider": "^2.9.1",
     "zone.js": "~0.8.26",
-    "ngx-tiny-slider": "0.0.3"
+    "ngx-tiny-slider": "0.0.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",

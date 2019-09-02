@@ -1,59 +1,73 @@
-<div class="component-wrapper">
-  <ngx-tiny-slider [config]="tinySliderConfig" #some>
-    <ng-container class="items">
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+<div class="center">
+  <b>Slider demo #1:</b>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+  <div class="mb-15 component-wrapper">
+    <ngx-tiny-slider [config]="tinySliderConfig" #slider>
+      <ng-container class="items">
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
 
-      <div class="item">
-        <a target="_blank" href="google.com">
-          <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
-        </a>
-      </div>
-    </ng-container>
-  </ngx-tiny-slider>
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
+
+        <div class="item">
+          <a target="_blank" href="google.com">
+            <img src="http://www.mattsorger.com/newsletterpics/gsw07_01.jpg">
+          </a>
+        </div>
+      </ng-container>
+    </ngx-tiny-slider>
+  </div>
+  <div class="mb-15">
+    Custom controls:
+    <div>
+      Go to <button class="btn-black" (click)="next()">next</button>
+    </div>
+
+    <div>
+      Go to <button class="btn-black" (click)="prev()">prev</button>
+    </div>
+  </div>
 </div>
