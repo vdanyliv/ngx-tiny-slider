@@ -9,7 +9,7 @@ import {NgxTinySliderInstance} from '../../projects/ngx-tiny-slider/src/lib/inte
 })
 export class AppComponent implements OnInit {
   tinySliderConfig: NgxTinySliderSettingsInterface;
-  @ViewChild('slider') slider: NgxTinySliderInstance;
+  @ViewChild('slider', { static: true }) slider: NgxTinySliderInstance;
 
   ngOnInit() {
     this.tinySliderConfig = {
