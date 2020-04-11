@@ -150,13 +150,13 @@
           "options": {
             "tsConfig": "projects/ngx-tiny-slider/tsconfig.lib.json",
             "project": "projects/ngx-tiny-slider/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/ngx-tiny-slider/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -180,5 +180,8 @@
       }
     }
   },
-  "defaultProject": "ngx-tiny-slider-wrapper"
+  "defaultProject": "ngx-tiny-slider-wrapper",
+  "cli": {
+    "analytics": false
+  }
 }
