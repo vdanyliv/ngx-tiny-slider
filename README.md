@@ -7,8 +7,8 @@ Angular component that gives you possibility to use tiny slider library.
 2. Import NgxTinySliderModule into your shared / root module
 3. Use in your component template use <ngx-tiny-slider>
 
-# Whats new on 0.0.4?
-1. Added component OnDestroy hook, that will handle slider instance destroying  
+# Whats new on 1.0.0?
+1. Angular 9 support  
 
 # Usage example
 Your module definition example
