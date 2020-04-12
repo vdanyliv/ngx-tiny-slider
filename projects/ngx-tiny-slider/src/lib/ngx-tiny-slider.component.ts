@@ -14,7 +14,7 @@ import {NgxTinySliderSettingsInterface} from './interfaces/ngx-tiny-slider-setti
 })
 export class NgxTinySliderComponent implements OnInit, OnDestroy {
   @Input() config: NgxTinySliderSettingsInterface;
-  @ViewChild('slideItems') slideItemsContainerRef;
+  @ViewChild('slideItems', { static: true }) slideItemsContainerRef;
 
   public sliderInstance;
   private aliveObservable = true;
