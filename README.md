@@ -9,6 +9,7 @@ Angular component that gives you possibility to use tiny slider library.
 
 # Whats new on 1.0.0?
 1. Angular 9 support  
+2. Interface export update
 
 # Usage example
 Your module definition example
