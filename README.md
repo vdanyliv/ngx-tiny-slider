@@ -7,9 +7,8 @@ Angular component that gives you possibility to use tiny slider library.
 2. Import NgxTinySliderModule into your shared / root module
 3. Use in your component template use <ngx-tiny-slider>
 
-# Whats new on 1.0.0?
-1. Angular 9 support  
-2. Interface export update
+# Whats new on 1.0.1?
+1. Possibility to import NgxTinySliderService in your component
 
 # Usage example
 Your module definition example
