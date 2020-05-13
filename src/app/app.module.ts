@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-import {NgxTinySliderModule} from 'ngx-tiny-slider';
+import {NgxTinySliderModule, NgxTinySliderService} from 'ngx-tiny-slider';
 
 @NgModule({
   imports: [
@@ -15,7 +15,9 @@ import {NgxTinySliderModule} from 'ngx-tiny-slider';
   exports: [
     NgxTinySliderModule
   ],
-  providers: [],
+  providers: [
+    NgxTinySliderService
+  ],
   bootstrap: [
     AppComponent
   ]

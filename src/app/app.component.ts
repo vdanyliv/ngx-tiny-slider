@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {NgxTinySliderSettingsInterface, NgxTinySliderInstance} from 'ngx-tiny-slider';
+import {NgxTinySliderSettingsInterface, NgxTinySliderInstance, NgxTinySliderService} from 'ngx-tiny-slider';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,9 @@ export class AppComponent implements OnInit {
   tinySliderConfig: NgxTinySliderSettingsInterface;
   @ViewChild('slider', {static: false}) slider: NgxTinySliderInstance;
 
+  constructor(private ngxTinySliderService: NgxTinySliderService) {
+  }
+
   ngOnInit() {
     this.tinySliderConfig = {
       arrowKeys: true,
@@ -18,6 +21,10 @@ export class AppComponent implements OnInit {
       nav: false,
       controlsText: ['<', '>']
     };
+  }
+
+  invokeService() {
+    console.log(this.ngxTinySliderService, 'ngxTinySliderService');
   }
 
   next() {
