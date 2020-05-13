@@ -1,6 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {NgxTinySliderSettingsInterface} from '../../projects/ngx-tiny-slider/src/lib/interfaces/ngx-tiny-slider-settings.interface';
-import {NgxTinySliderInstance} from '../../projects/ngx-tiny-slider/src/lib/interfaces/ngx-tiny-slider-instanse.interface';
+import {NgxTinySliderSettingsInterface, NgxTinySliderInstance} from 'ngx-tiny-slider';
 
 @Component({
   selector: 'app-root',
