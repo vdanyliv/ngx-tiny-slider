@@ -103,3 +103,6 @@ Your component template example
   
   # Additional options
   1. domReady {Subject} - provide possibility to initialize component manually
+  
+  # Sandboxes
+  1. Custom controls [codesandbox.io](https://codesandbox.io/s/ngx-tiny-slider-custom-controls-rhrq6)
