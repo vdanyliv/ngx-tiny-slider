@@ -76,4 +76,17 @@
       Invoke ngx-service <button class="btn-black" (click)="invokeService()">open console</button>
     </div>
   </div>
+
+  <b>Slider demo #2 - Lazy loading:</b>
+  <div class="mb-15 component-wrapper">
+    <ngx-tiny-slider [config]="tinySliderConfigLazy" #sliderLazy>
+      <ng-container class="items">
+        <div class="item" *ngFor="let img of listOfImages" [class.hidden]="sliderHidden">
+          <a target="_blank" href="#">
+            <img [src]=img (load)="onImgLoadSuccess()">
+          </a>
+        </div>
+      </ng-container>
+    </ngx-tiny-slider>
+  </div>
 </div>

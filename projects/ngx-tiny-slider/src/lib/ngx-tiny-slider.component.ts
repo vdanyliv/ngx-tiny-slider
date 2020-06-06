@@ -13,7 +13,7 @@ import {NgxTinySliderSettingsInterface} from './interfaces/ngx-tiny-slider-setti
   encapsulation: ViewEncapsulation.None
 })
 export class NgxTinySliderComponent implements OnInit, OnDestroy {
-  @Input() config: NgxTinySliderSettingsInterface;
+  @Input() config: NgxTinySliderSettingsInterface = {};
   @ViewChild('slideItems', { static: true }) slideItemsContainerRef;
 
   public sliderInstance;
@@ -30,7 +30,7 @@ export class NgxTinySliderComponent implements OnInit, OnDestroy {
       this.extendConfig();
     }
 
-    if (this.config.waiteForDom) {
+    if (this.config.waitForDom) {
       this.listenForDomReady();
     } else {
       this.initSlider();
@@ -38,7 +38,7 @@ export class NgxTinySliderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.config.waiteForDom) {
+    if (this.config.waitForDom) {
       this.aliveObservable = false;
     }
 
