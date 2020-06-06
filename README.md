@@ -9,6 +9,7 @@ Angular component that gives you possibility to use tiny slider library.
 
 # Sandboxes
 1. Custom controls [codesandbox.io](https://codesandbox.io/s/ngx-tiny-slider-custom-controls-rhrq6)
+2. Lazy loading / Wait for DOM [codesandbox.io](https://codesandbox.io/s/ngx-tiny-slider-wait-for-dom-gvvqh)
 
 # Whats new on 1.0.2?
 1. Added lazy loading example
