@@ -10,8 +10,9 @@ Angular component that gives you possibility to use tiny slider library.
 # Sandboxes
 1. Custom controls [codesandbox.io](https://codesandbox.io/s/ngx-tiny-slider-custom-controls-rhrq6)
 
-# Whats new on 1.0.1?
-1. Possibility to import NgxTinySliderService in your component
+# Whats new on 1.0.2?
+1. Added lazy loading example
+2. Added domReady into NgxTinySliderInstanceInterface
 
 # Usage example
 Your module definition example
