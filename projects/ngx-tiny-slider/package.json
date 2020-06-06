@@ -1,6 +1,6 @@
 {
   "name": "ngx-tiny-slider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "tiny-slider": "^2.9.1"
   },
