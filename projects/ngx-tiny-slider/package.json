@@ -2,11 +2,12 @@
   "name": "ngx-tiny-slider",
   "version": "1.0.2",
   "dependencies": {
-    "tiny-slider": "^2.9.1"
+    "tiny-slider": "2.9.2",
+    "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "~9.1.1",
-    "@angular/core": "~9.1.1"
+    "@angular/common": "~11.2.10",
+    "@angular/core": "~11.2.10"
   },
   "author": "Volodymyr Danyliv",
   "description": "Angular component that gives you possibility to use tiny-slider library.",
