@@ -24,7 +24,7 @@
     "core-js": "^2.5.4",
     "ngx-tiny-slider": "^1.0.2",
     "rxjs": "~6.5.5",
-    "tiny-slider": "ganlanyuan/tiny-slider#pull/598/head",
+    "tiny-slider": "PieterQQ/tiny-slider",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
