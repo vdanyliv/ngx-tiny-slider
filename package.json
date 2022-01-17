@@ -24,7 +24,7 @@
     "core-js": "^2.5.4",
     "ngx-tiny-slider": "^1.0.2",
     "rxjs": "~6.5.5",
-    "tiny-slider": "git+https://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:x-oauth-basic@github.com/mansur17/tiny-slider.git",
+    "tiny-slider": "git+https://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:x-oauth-basic@github.com/mansur17/tiny-slider.git",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.4"
   },
