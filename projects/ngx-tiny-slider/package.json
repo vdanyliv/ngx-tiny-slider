@@ -6,8 +6,8 @@
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "~11.2.10",
-    "@angular/core": "~11.2.10"
+    "@angular/common": "^14.2.5",
+    "@angular/core": "^14.2.5"
   },
   "author": "Volodymyr Danyliv",
   "description": "Angular component that gives you possibility to use tiny-slider library.",

@@ -5,9 +5,6 @@
     "tiny-slider"
   ],
   "lib": {
-    "entryFile": "./src/public_api.ts",
-    "umdModuleIds": {
-      "tiny-slider/src/tiny-slider": "tiny-slider/src/tiny-slider"
-    }
+    "entryFile": "./src/public_api.ts"
   }  
 }
