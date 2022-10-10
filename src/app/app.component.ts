@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 
 import {NgxTinySliderSettingsInterface} from '../../projects/ngx-tiny-slider/src/lib/interfaces/ngx-tiny-slider-settings.interface';
-import {NgxTinySliderInstanceInterface} from '../../projects/ngx-tiny-slider/src/lib/interfaces/ngx-tiny-slider-instanse.interface';
+import {NgxTinySliderInstanceInterface} from '../../projects/ngx-tiny-slider/src/lib/interfaces/ngx-tiny-slider-instance.interface';
 import {NgxTinySliderService} from '../../projects/ngx-tiny-slider/src/lib/ngx-tiny-slider.service';
 import {BehaviorSubject} from 'rxjs';
 import {filter} from 'rxjs/operators';
